@@ -24,8 +24,8 @@ const onClick = () => {
 
 const openNewTab = () => {
   console.log('openNewTab');
-  // var newURL = "https://segmentfault.com/";
-  // chrome.tabs.create({ url: newURL });
+  var newURL = "https://segmentfault.com/";
+  window.chrome.tabs.create({ url: newURL });
 }
 </script>
 
