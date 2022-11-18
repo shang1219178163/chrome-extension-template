@@ -1,6 +1,6 @@
 <template>
   <div class="main_app">
-    <h1>Hello popup111</h1>
+    <h1>Hello newtab</h1>
     <HelloWorld msg="Welcome to Your Vue.js Chrome Extension!"/>
     <button @click="onClick">button</button>
   </div>
@@ -15,18 +15,9 @@ export default {
 <script setup>
 import HelloWorld from '../components/HelloWorld.vue'
 
-
 const onClick = () => {
   alert('Hello popup');
-
-  openNewTab();
 };
-
-const openNewTab = () => {
-  console.log('openNewTab');
-  // var newURL = "https://segmentfault.com/";
-  // chrome.tabs.create({ url: newURL });
-}
 </script>
 
 <style>
