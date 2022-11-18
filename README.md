@@ -22,3 +22,13 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### 创建一个基于 vue3 的 chrome 扩展工程
+
+vue create hello-chrome-vue
+
+vue add chrome-ext
+
+npm install --save-d @types/chrome
+
