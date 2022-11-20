@@ -1,13 +1,12 @@
 <template>
-  <div class="main_app">
-    <div class="main_app_header">
-      <h1>Hello newtab</h1>
-      <h1>JSON to TypeScript</h1>
-      <!-- <HelloWorld msg="Welcome to Your Vue.js Chrome Extension!"/> -->
+  <div class="view">
+    <div class="view_header">
+      <h3>Hello newtab</h3>
+      <h3>JSON to TypeScript</h3>
       <button @click="onClick">button</button>
     </div>
-    <div class="main_app_main">
-      <div class="main_app_main_left">
+    <div class="view_main">
+      <div class="view_main_left">
         <label for="story">Tell us your story:</label>
         <textarea 
           class="json-text"
@@ -18,21 +17,22 @@
         It was a dark and stormy night...
         </textarea>
       </div>
-      <div class="main_app_main_right">
-        main_app_main_right
+      <div class="view_main_right">
+        <div>
+          view_main_right
+        </div>
       </div>
     </div>
-    <div class="main_app_footer">
+    <div class="view_footer">
       <h4>minimum_chrome_version: {{ manifest.minimum_chrome_version }} </h4>
     </div>
   </div>
 </template>
 
 <script setup>
-// import HelloWorld from '../components/HelloWorld.vue'
-import manifest from '../../manifest.development.json';
 
 import { ref } from 'vue';
+import manifest from '../manifest.development.json';
 
 const json = ref('');
 json.value = "这是一个textarea框";
@@ -43,38 +43,49 @@ const onClick = () => {
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  /* margin-top: 60px; */
+<style scoped>
+div{
+  /* border: 0.5px solid blue; */
+}
 
+.view {
   box-sizing: border-box;
-}
 
-.main_app {
+  padding: 8px;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
-.main_app_main{
+.view_header{
+  /* max-height: 100px; */
+}
+
+.view_footer{
+  /* max-height: 100px; */
+}
+
+.view_main{
+  flex: 1;
+
   display: flex;
   justify-content: space-between;
-  
-  width: 80%;
-  height: 100%;
+
+  overflow: auto;
+
+  padding: 8px;
+  height: 300px;
+  background-color: green;
 }
 
-.main_app_main_left, .main_app_main_right{
+.view_main_left, 
+.view_main_right{
   display: flex;
   flex-direction: column;
 
-  /* width: 100%; */
-
-  border: 1px solid blue;
+  width: 45%;
 }
 
 

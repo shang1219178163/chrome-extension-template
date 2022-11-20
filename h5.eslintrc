@@ -1,0 +1,209 @@
+{
+    "parser": "vue-eslint-parser",
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true,
+        "commonjs": true,
+        "worker": true,
+        "amd": true,
+        "mocha": true,
+        "jest": true,
+        "jquery": true,
+        "serviceworker": true
+    },
+    "settings": {
+        "import/ignore": [
+            "node_modules"
+        ]
+    },
+    "parserOptions": {
+        "parser": "@babel/eslint-parser",
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/vue3-essential",
+        "plugin:vue/base"
+    ],
+    "globals": {
+        "defineProps": "readonly",
+        "defineEmits": "readonly",
+        "defineExpose": "readonly",
+        "withDefaults": "readonly"
+    },
+    "plugins": [
+        "vue",
+        "import",
+        "node",
+        "promise"
+    ],
+    "rules": {
+        "no-cond-assign": 2,
+        "no-constant-condition": 2,
+        "no-control-regex": 0,
+        "no-dupe-args": 2,
+        "no-dupe-keys": 2,
+        "no-duplicate-case": 2,
+        "no-console": "off",
+        "no-debugger": 1,
+        "no-var": 0,
+        "no-empty": 0,
+        "no-trailing-spaces": 0,
+        "no-empty-character-class": 2,
+        "no-ex-assign": 2,
+        "no-extra-boolean-cast": 2,
+        "no-extra-semi": 2,
+        "no-func-assign": 2,
+        "no-inner-declarations": 2,
+        "no-irregular-whitespace": 2,
+        "no-obj-calls": 2,
+        "no-sparse-arrays": 2,
+        "use-isnan": 2,
+        "valid-typeof": 2,
+        "eol-last": 0,
+        "no-unused-vars": 2,
+        "no-underscore-dangle": 0,
+        "jsx-quotes": 0,
+        "no-undef": 0,
+        "no-extra-parens": [
+            2,
+            "functions"
+        ],
+        "no-prototype-builtins": 2,
+        "no-template-curly-in-string": 2,
+        "no-unsafe-negation": 2,
+        "array-callback-return": 2,
+        "block-scoped-var": 2,
+        "class-methods-use-this": 0,
+        "complexity": 2,
+        "consistent-return": 2,
+        "curly": 2,
+        "default-case": 0,
+        "dot-location": [
+            2,
+            "property"
+        ],
+        "dot-notation": 2,
+        "eqeqeq": 2,
+        "guard-for-in": 2,
+        "no-alert": 2,
+        "no-caller": 2,
+        "no-div-regex": 2,
+        "no-else-return": 2,
+        "no-empty-function": 2,
+        "no-eq-null": 2,
+        "no-eval": 2,
+        "no-extend-native": 2,
+        "no-extra-label": 2,
+        "no-floating-decimal": 2,
+        "no-global-assign": 2,
+        "no-implicit-coercion": 0,
+        "no-implicit-globals": 2,
+        "no-implied-eval": 2,
+        "no-invalid-this": 2,
+        "no-iterator": 2,
+        "no-labels": 2,
+        "no-lone-blocks": 2,
+        "no-loop-func": 2,
+        "no-magic-numbers": 0,
+        "no-multi-spaces": 2,
+        "no-multi-str": 2,
+        "no-new-func": 2,
+        "no-new-wrappers": 2,
+        "no-octal-escape": 2,
+        "no-param-reassign": 1,
+        "no-proto": 2,
+        "no-script-url": 2,
+        "no-self-compare": 2,
+        "no-sequences": 2,
+        "no-throw-literal": 0,
+        "no-unmodified-loop-condition": 2,
+        "no-unused-expressions": [
+            "error",
+            {
+                "allowShortCircuit": true,
+                "allowTernary": true,
+                "allowTaggedTemplates": true
+            }
+        ],
+        "no-useless-concat": 2,
+        "no-useless-escape": 2,
+        "no-void": 2,
+        "no-warning-comments": 0,
+        "no-with": 2,
+        "radix": 2,
+        "init-declarations": 0,
+        "no-catch-shadow": "error",
+        "no-label-var": "error",
+        "no-shadow-restricted-names": "error",
+        // "no-shadow": "error",
+        "no-shadow": "off",
+        "no-undef-init": "error",
+        "no-undefined": 0,
+        "brace-style": [
+            "error",
+            "1tbs",
+            {
+                "allowSingleLine": true
+            }
+        ],
+        "camelcase": 0,
+        "comma-style": [
+            "error",
+            "last"
+        ],
+        "consistent-this": [
+            "error",
+            "self"
+        ],
+        "max-depth": [
+            "error",
+            4
+        ],
+        "max-len": [
+            "error",
+            120,
+            2
+        ],
+        "max-statements-per-line": "error",
+        "new-cap": [
+            "error",
+            {
+                "capIsNew": false
+            }
+        ],
+        "new-parens": "error",
+        "no-bitwise": 0,
+        "no-continue": "error",
+        "no-lonely-if": "error",
+        "no-negated-condition": 0,
+        "object-property-newline": [
+            "error",
+            {
+                "allowMultiplePropertiesPerLine": true
+            }
+        ],
+        "operator-linebreak": "error",
+        // "quotes": [
+        //     2,
+        //     "single"
+        // ],
+        // "quotes": [0, "double"], //使用双引号，关闭
+        "semi": [
+            2,
+            "always"
+        ],
+        "no-use-before-define": [
+            "error",
+            {
+                "variables": false,
+                "functions": false
+            }
+        ]
+    }
+}

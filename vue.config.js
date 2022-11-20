@@ -28,9 +28,15 @@ const plugins = process.env.NODE_ENV === "production"
         }
       ];
 
+// module.exports = {
+//   pages: pagesObj,
+//   configureWebpack: {
+//     plugins: [CopyWebpackPlugin(plugins)]
+//   },
+// };
+
 module.exports = {
-  pages: pagesObj,
-  configureWebpack: {
-    plugins: [CopyWebpackPlugin(plugins)]
-  }
+  publicPath: './',
+  indexPath: 'index.html',
+  runtimeCompiler: true,
 };
