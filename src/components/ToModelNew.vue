@@ -1,5 +1,5 @@
 <template>
-  <VLeave class="view">
+  <VExpand class="view">
     <template #header>
       <div class="view_header">
         <h3>Hello newtab</h3>
@@ -34,11 +34,11 @@
       </div>
     </div>
 
-  </VLeave>
+  </VExpand>
 </template>
 
 <script setup>
-import VLeave from './VLeave.vue';
+import VExpand from './VExpand.vue';
 
 import { ref } from 'vue';
 import manifest from '../manifest.development.json';
