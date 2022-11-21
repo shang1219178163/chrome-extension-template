@@ -10,15 +10,15 @@
 */
 
 <template>
-  <div class="vexpand-box">
-    <div class="vexpand-box__header">
-      <slot name="header">header</slot>
+  <div class="vexpand">
+    <div class="vexpand__header">
+      <slot name="header"></slot>
     </div>
-    <div class="vexpand-box__leave">
+    <div class="vexpand__content">
       <slot>剩余高度视图</slot>
     </div>
-    <div class="vexpand-box__footer">
-      <slot name="footer">footer</slot>
+    <div class="vexpand__footer">
+      <slot name="footer"></slot>
     </div>
   </div>
 </template>
@@ -36,23 +36,25 @@
 
 <style scoped>
 
-.vexpand-box {
+.vexpand {
   display: flex;
-  flex-flow: column nowrap;
-
+  flex-direction: column;
+  flex-wrap: nowrap;
+  
+  width: inherit;
   height: inherit;
   position: fixed;
 }
 
-.vexpand-box__header {
+/* .vexpand__header {
   width: 100vw;
 }
 
-.vexpand-box__footer {
+.vexpand__footer {
   width: 100vw;
-}
+} */
 
-.vexpand-box__leave {
+.vexpand__content {
   flex: 1;
 
   overflow: auto;
